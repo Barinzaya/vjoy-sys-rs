@@ -37,7 +37,7 @@ fn generate_bindings() {
 		.allowlist_file(r".*\bgen-versioninfo\.h")
 		.allowlist_file(r".*\bpublic\.h")
 		.allowlist_file(r".*\bvjoyinterface\.h")
-        .disable_name_namespacing()
+		.disable_name_namespacing()
 		.header(format!("{}", header_path.display()))
 		.clang_arg(format!("-I{}", inc_path.display()))
 		.parse_callbacks(Box::new(bindgen::CargoCallbacks))
